@@ -13,7 +13,7 @@ dependencies {
 
     compile "org.springframework.boot:spring-boot-starter-web"
 
-    compile "com.zaxxer:HikariCP:2.3.7"
+    compile "com.zaxxer:HikariCP:3.2.0"
     compile "mysql:mysql-connector-java:$mysqlVersion"
     compile "ch.qos.logback:logback-classic:1.1.11"
 
