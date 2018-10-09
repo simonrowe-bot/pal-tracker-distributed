@@ -9,3 +9,10 @@ build
 ci/variables.yml
 components/allocations/out
 components/rest-support/out
+*/out/**
+applications/allocations-server/out
+applications/backlog-server/out
+applications/registration-server/out
+applications/timesheets-server/out
+components/accounts/out
+**/out/**
