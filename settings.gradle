@@ -4,11 +4,14 @@ include "applications:allocations-server"
 include "applications:backlog-server"
 include "applications:registration-server"
 include "applications:timesheets-server"
+include "platform-services:eureka"
 
 include "components:accounts"
 include "components:allocations"
 include "components:backlog"
 include "components:projects"
+
+
 include "components:timesheets"
 include "components:users"
 
