@@ -46,9 +46,10 @@ public class App extends WebSecurityConfigurerAdapter {
     }
 
     @GetMapping("/health")
-    public Map<String,Health> health() {
-        HashMap<String, Health> healthMap = new HashMap<>();
-        healthMap.put("hystrix",Health.status(Status.UP).build());
+    public Map<String,Object> health() {
+        HashMap<String, Object> healthMap = new HashMap<>();
+        healthMap.put("hystrix", Health.status(Status.UP).build());
+        healthMap.put("status", "UP");
         return healthMap;
     }
 }
