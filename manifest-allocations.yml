@@ -2,7 +2,7 @@ applications:
 - name: tracker-allocations
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
-  - route: allocations-pal-sjr.cfapps.io
+  - route: allocations-pal-sjr.cfapps.lab01.pcf.pw
   memory: 1G
   instances: 1
   services:
