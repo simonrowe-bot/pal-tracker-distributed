@@ -18,7 +18,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TimeZone;
 
-
 @EnableWebSecurity
 @EnableResourceServer
 @EnableEurekaClient
