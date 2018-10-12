@@ -5,8 +5,9 @@ buildscript {
         springBootVersion = "2.0.5.RELEASE"
         springVersion = "5.0.9.RELEASE"
         mysqlVersion = "8.0.12"
-        springCloudDependenciesVersion = "Finchley.RELEASE"
+        springCloudDependenciesVersion = "Finchley.SR1"
         springCloudServicesVersion = "2.0.1.RELEASE"
+        springCloudSsoVersion = "2.0.0.RELEASE"
     }
 
     repositories {
