@@ -49,6 +49,7 @@ public class App  {
     public Map<String,Object> health() {
         HashMap<String, Object> healthMap = new HashMap<>();
         healthMap.put("hystrix", Health.status(Status.UP).build());
+        healthMap.put("configServer", Health.status(Status.UP).build());
         healthMap.put("status", "UP");
         return healthMap;
     }
