@@ -14,9 +14,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TimeZone;
+import java.util.*;
 
 @EnableWebSecurity
 @EnableResourceServer
@@ -44,4 +42,16 @@ public class App {
         healthMap.put("status", "UP");
         return healthMap;
     }
+
+    @GetMapping("/beans")
+    public List<Map<String, List<Map<String, String>>>> beans() {
+        List<Map<String, List<Map<String, String>>>> output = new ArrayList<>();
+        output.add(new HashMap<>());
+        output.get(0).put("beans", new ArrayList<>());
+        output.get(0).get("beans").add(new HashMap<>());
+        output.get(0).get("beans").get(0).put("bean", "loadBalancerClient");
+        return output;
+    }
 }
+
+

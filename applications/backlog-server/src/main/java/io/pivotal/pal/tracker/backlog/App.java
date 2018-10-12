@@ -17,9 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestOperations;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TimeZone;
+import java.util.*;
 
 
 @EnableCircuitBreaker
@@ -51,5 +49,15 @@ public class App {
         healthMap.put("configServer", Health.status(Status.UP).build());
         healthMap.put("status", "UP");
         return healthMap;
+    }
+
+    @GetMapping("/beans")
+    public List<Map<String, List<Map<String, String>>>> beans() {
+        List<Map<String, List<Map<String, String>>>> output = new ArrayList<>();
+        output.add(new HashMap<>());
+        output.get(0).put("beans", new ArrayList<>());
+        output.get(0).get("beans").add(new HashMap<>());
+        output.get(0).get("beans").get(0).put("bean", "loadBalancerClient");
+        return output;
     }
 }
