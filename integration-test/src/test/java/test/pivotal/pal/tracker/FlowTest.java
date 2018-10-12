@@ -41,6 +41,8 @@ public class FlowTest {
     }
 
     private long findResponseId(HttpClient.Response response) {
+        System.out.println("Response Body is "+ response.body);
+        System.out.println("response status" + response.status);
         try {
             return JsonPath.parse(response.body).read("$.id", Long.class);
         } catch (PathNotFoundException e) {
