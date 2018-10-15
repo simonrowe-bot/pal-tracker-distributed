@@ -11,6 +11,6 @@ public class ActuatorSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.httpBasic();
+        http.httpBasic().and().authorizeRequests().anyRequest().authenticated();
     }
 }
